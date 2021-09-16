@@ -6,7 +6,8 @@ namespace EmployeeWageCal
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            EmployeeWage employeeWage = new EmployeeWage();
+            employeeWage.Attendance();
         }
     }
 }
