@@ -7,7 +7,7 @@ namespace EmployeeWageCal
         static void Main(string[] args)
         {
             EmployeeWage employeeWage = new EmployeeWage();
-            employeeWage.EmployeeHours();
+            employeeWage.EmployeeWageForMonth();
             Console.ReadLine();
         }
     }
