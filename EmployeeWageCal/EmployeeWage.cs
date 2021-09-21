@@ -30,9 +30,6 @@ namespace EmployeeWageCal
                 }
                 Console.WriteLine(emphours);
             }
-            work_hours = work_hours + emphours;
-            Console.WriteLine(work_days);
-            Console.WriteLine(work_hours);
             totalwage = work_hours * WAGE_PER_HOUR;
             Console.WriteLine(totalwage);
         }
