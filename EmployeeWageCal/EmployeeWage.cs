@@ -13,7 +13,7 @@ namespace EmployeeWageCal
             Random random = new Random();
             for (int i = 0; i < WORKDAY_PER_MONTH; i++)
             {
-                int emplyoeecheck = random.Next(1, 3);
+                int emplyoeecheck = random.Next(0, 2);
                 switch (emplyoeecheck)
                 {
                     case IS_FULLTIME:
