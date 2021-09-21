@@ -11,7 +11,7 @@ namespace EmployeeWageCal
         public void EmployeeTotalWage()
         {
             Random random = new Random();
-            int emplyoeecheck = random.Next(1, 2);
+            int emplyoeecheck = random.Next(0, 2);
             if (emplyoeecheck == IS_PRESENT)
             {
                 this.totalwage = WAGE_PER_HOUR * FULL_DAY_HOUR;
