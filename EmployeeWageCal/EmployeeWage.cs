@@ -6,7 +6,7 @@ namespace EmployeeWageCal
 {
     class EmployeeWage
     {
-        const int IS_FULLTIME = 0, IS_PARTTIME = 1, WORKING_DAYS = 20, TOTAL_WORK_HOUR = 100, WAGE_PER_HOUR = 20, FULL_DAY_HOUR = 8, PART_TIME_HOUR = 4;
+        const int IS_FULLTIME = 0, IS_PARTTIME = 1, WORKING_DAYS = 20, TOTAL_WORK_HOUR = 100, WAGE_PER_HOUR = 20, FULL_DAY_HOUR = 8, PART_TIME_HOUR = 4 ;
 
         int work_days = 0, work_hours = 0, emphours = 0, totalwage = 0;
         public void EmployeeWageForMonth()
@@ -28,7 +28,7 @@ namespace EmployeeWageCal
                         emphours += 0;
                         break;
                 }
-                Console.WriteLine(emphours);
+                Console.WriteLine("employee hours"+emphours);
             }
             work_hours = work_hours + emphours;
             Console.WriteLine(work_days);
