@@ -6,33 +6,43 @@ namespace EmployeeWageCal
 {
     class EmployeeWage
     {
-        const int IS_FULLTIME = 0, IS_PARTTIME = 1;
-
-        int totalworkdays=0, emphours = 0, totalEmpHours = 0;
-        public void EmployeeWageForMonth(string company,int wageperhour,int numofworkdays,int maxhourpermonth)
+        const int IS_FULL_TIME = 1;
+        const int IS_PART_TIME = 2;
+        private string companyName;
+        int employeeRatePerHour, numofworkdays, maxhourpermonth, totalEmpWage;
+        public EmployeeWage(string companyName, int employeeRatePerHour, int numberOfWorkingDays, int maxHrsInMonth)
         {
-
+            this.companyName = companyName;
+            this.employeeRatePerHour = employeeRatePerHour;
+            this.numofworkdays = numberOfWorkingDays;
+            this.maxhourpermonth = maxHrsInMonth;
+        }
+        public void CalEmployeeWage()
+        {
+            int employeeHours = 0;
+            int totalEmployeeHours = 0;
+            int totalWorkingDays = 0;
             Random random = new Random();
             int emplyoeecheck = random.Next(0, 3);
-            while (totalEmpHours <= maxhourpermonth && totalworkdays < numofworkdays)
+            while (totalEmployeeHours <= maxhourpermonth && totalWorkingDays < numofworkdays)
             {
-                totalworkdays += 1;
+                totalWorkingDays += 1;
                 switch (emplyoeecheck)
                 {
-                    case IS_FULLTIME:
-                        emphours += 8;
+                    case IS_FULL_TIME:
+                        employeeHours += 8;
                         break;
-                    case IS_PARTTIME:
-                        emphours += 4;
+                    case IS_PART_TIME:
+                        employeeHours += 4;
                         break;
                     default:
-                        emphours += 0;
+                        employeeHours += 0;
                         break;
                 }
-                Console.WriteLine("employee hours"+emphours);
+                Console.WriteLine("employee hours" + employeeHours);
             }
-            int totalEmpWage = totalEmpHours + wageperhour;
-            Console.WriteLine("total employee wage for company" + company + "is" + totalEmpWage);
+            int totalEmpWage = totalEmployeeHours + employeeRatePerHour;
+            Console.WriteLine(" employee wage for company " + companyName + " is " + totalEmpWage);
         }
     }
 }

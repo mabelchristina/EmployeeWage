@@ -6,10 +6,10 @@ namespace EmployeeWageCal
     {
         static void Main(string[] args)
         {
-            EmployeeWage employeeWage = new EmployeeWage();
-            employeeWage.EmployeeWageForMonth("starBazaar",20,1,22);
-            employeeWage.EmployeeWageForMonth("BigBazaar", 10, 3, 21);
-            Console.ReadLine();
+            EmployeeWage apple = new EmployeeWage("Apple", 50, 20, 100);
+            EmployeeWage google = new EmployeeWage("Google", 60, 20, 110);
+            apple.CalEmployeeWage();
+            google.CalEmployeeWage();
         }
     }
 }
